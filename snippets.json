@@ -219,6 +219,14 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "предупреждение_meatfly",
+	"recurrence": "1 hours",
+	"global": true,
+	"condition": {"and": [{ "compare_num": [ { "time_until_eoc": "спавн_1_группы_meatfly", "unit":"hours" }, "=", { "const": 1 } ] },{ "compare_num": [ { "global_val": "var", "var_name": "сложность_игры" }, "=", { "const": 99 } ] }]},
+    "effect": [ {"u_message": "Вы чувствуете приближение серьёзной опасности.","popup":true} ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "предупреждение1",
 	"recurrence": "1 day",
 	"global": true,

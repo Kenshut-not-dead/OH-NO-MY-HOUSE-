@@ -346,6 +346,108 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "спавн_1_группы_meatfly",
+	"recurrence": "1 day",
+	"global": true,
+	"condition": { "compare_num": [ { "global_val": "var", "var_name": "сложность_игры" }, "=", { "const": 99 } ] },
+    "effect": [
+      {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "необычная_группа",
+        "real_count": {"arithmetic":[ {"arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ]}, "-",{ "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  {
+        "u_spawn_monster": "обычная_группа",
+        "real_count": { "arithmetic": [ { "global_val": "var", "var_name": "сложность" }, "/", { "const": 10 } ] },
+        "min_radius": 35,
+        "max_radius": 50,
+		"outdoor_only": true,
+		"group": true
+      },
+	  { "run_eocs": "выбор_соообщения" } ,
+	  { "math": [ "волны", "+=", "1" ]},
+	  { "math": [ "коечто", "=", "boss_spawn()" ]},
+	  { "run_eocs": "босс_волна_усложнен" } ,
+	  { "math": [ "сложность", "+=", "100" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "спавн_1_группы_легкий",
 	"recurrence": "14 day",
 	"global": true,
